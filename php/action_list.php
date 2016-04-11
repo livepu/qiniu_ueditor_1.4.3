@@ -32,8 +32,9 @@ $start = isset($_GET['start']) ? htmlspecialchars($_GET['start']) : 0;
 $end = $start + $size;
 
 //演示方法
+$prefix_date=date("Y/m/");//增加前缀条件，列出当月。
 $Qiniu_List = Qiniu_List::getInstance();
-$Qiniu_List -> getUrl('','',1000);
+$Qiniu_List -> getUrl($prefix_date,'',1000);
 
 $files = $Qiniu_List -> listFiles();
 $marker = $files['marker'];
