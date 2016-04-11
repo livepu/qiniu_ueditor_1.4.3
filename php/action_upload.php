@@ -62,6 +62,8 @@ $qiniu = new Qiniu($config);
 //命名规则
 if($SAVETYPE == 'date'){
     $key = time().'.'.pathinfo($_FILES[$fieldName]["name"], PATHINFO_EXTENSION);  
+}elseif($SAVETYPE == 'datedir'){
+	$key = date("Y/m/").time().'.'.pathinfo($_FILES[$fieldName]["name"], PATHINFO_EXTENSION);
 }else{
     $key = $_FILES[$fieldName]['name'];
 }
