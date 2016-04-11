@@ -27,7 +27,7 @@ $HOST  = "http://gitwiduu.u.qiniudn.com";
 $TIMEOUT = "3600";
 
 //保存规则
-$SAVETYPE = "date";
+$SAVETYPE = "datedir";//自己添加的格式
 
 //开启水印
 $USEWATER = false;
