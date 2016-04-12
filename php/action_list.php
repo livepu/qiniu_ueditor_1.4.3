@@ -61,7 +61,7 @@ for ($i = min($end, $len) - 1, $list = array(); $i < $len && $i >= 0 && $i >= $s
 /* 返回数据 */
 $result = json_encode(array(
     "state" => "SUCCESS",
-    "list" => array_reverse($list),  //相反顺序输出
+    "list" =>$list, //array_reverse($list),  //相反顺序输出
     "start" => $start,
     "total" => count($files['items'])
 ));
